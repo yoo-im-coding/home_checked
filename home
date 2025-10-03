@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Page with Tailwind & DaisyUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script>
+    tailwind.config = {
+      plugins: [require('daisyui')],
+    }
+  </script> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="bg-base-200 text-base-content">
+    <!-- Navbar -->
+    <div
+      class="navbar bg-base-100/60 backdrop-blur supports-[backdrop-filter]:bg-base-100/60 sticky top-0 z-50 border-b border-base-200 shadow-md px-4"
+    >
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">MySite</a>
+      </div>
+      <div class="flex-none">
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <ul class="menu menu-horizontal px-1 hidden lg:flex">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- nav end -->
+    <!-- body start -->
+    <body>
+      <div
+        class="hero min-h-screen"
+        style="background-image: url(/assets/hero.jpg)"
+      >
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+            <p class="mb-5">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button
+              class="btn btn-error border-transparent bg-emerald-500 text-white"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- hero end -->
+
+       <div class="container">
+    <div class="btn btn-soft btn-success" onclick="revealSecret()">click me</div>
+</div>
+      <!-- cat strat -->
+      <div class="text-2xl font-bold p-7 mt-10 text-center">Explore Our Categories</div>
+      <div
+        class="sale grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-10 overflow-x-auto"
+      >
+      
+        <div class="card bg-base-100 shadow-sm w-full">
+          <figure class="px-10 pt-10">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Card Title 1</h2>
+            <p>
+              A card component has a figure, a body part, and inside body there
+              are title and actions parts
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-primary text-white">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-sm w-full">
+          <figure class="px-10 pt-10">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Card Title 1</h2>
+            <p>
+              A card component has a figure, a body part, and inside body there
+              are title and actions parts
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-primary text-white">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm w-full">
+          <figure class="px-10 pt-10">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Card Title 2</h2>
+            <p>
+              A card component has a figure, a body part, and inside body there
+              are title and actions parts
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-base-100 shadow-sm w-full">
+          <figure class="px-10 pt-10">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              alt="Shoes"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Card Title 3</h2>
+            <p>
+              A card component has a figure, a body part, and inside body there
+              are title and actions parts
+            </p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cat end -->
+       <!-- sale strat -->
+        <div class="bg-success text-white text-2xl font-bold p-5 mt-5 text-center">
+            <p class="text-2xl mb-3">Autumn sale</p>
+            <p class="text-5xl">Up to 50% Off</p>
+            <button class="btn btn-warning mt-3">Shop Now</button>
+
+        </div>
+        <!-- sale end -->
+         <!-- lil des start -->
+          <div class="text-center ">
+            <div class="text-2xl font-bold p-5 text-success-300">In love with Nature🏝️</div>
+            <p class="text-lg leading-6">Discover the beauty of the natural world with our exclusive collection of plant-themed products. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, omnis accusantium possimus provident eius dolores architecto non recusandae. Magni non maxime ducimus eius, sint sapiente!</p>
+          </div>
+          <!-- lil des end -->
+
+
+    </body>
+
+    <!-- body end -->
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <aside>
+        <p>© 2025 MySite. All rights reserved.</p>
+      </aside>
+    </footer>
+
+    <script src="js.js"></script>
+  </body>
+</html>
